@@ -13,9 +13,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.RepresentationModel;
 
 @Entity
-public class Student {
+public class Student extends RepresentationModel<Student> { // using hateoas
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
